@@ -15,11 +15,17 @@ var isBalanced = function(str) {
     let sumOne = 0;
     let sumTwo = 0;
 
-    for ( value in str){
+    for ( value in str){   
+
+        
         if (value=== "("){
             sumOne++
         } else if (value===")"){
-            sumTwo ++
+            {
+                if (sumOne>0){
+                    sumTwo++
+                }
+            }
         }
     }
       if (sumOne === sumTwo){
